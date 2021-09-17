@@ -1,0 +1,120 @@
+1 Create an menu drive console-based application to regiter, view, update and delete student details.
+
+ackage JavaHotelMenuProgram;
+
+import java.util.Scanner;
+
+public class Studentdetail {
+
+	public static void main(String[] args){
+		Scanner scan = new Scanner(System.in);
+
+		System.out.println("Welcome to Student portal");
+		System.out.println();
+
+		//Creating Menu
+		while(true){
+			System.out.println("To register, Enter 1");
+			System.out.println("To view, Enter 2");
+			System.out.println("To update, Enter 3");
+			System.out.println("To delete, Enter 4")
+			System.out.println("To Exit, Enter 5");
+
+			System.out.println();
+			System.out.println("Enter your choice::");
+			int choice = scan.nextInt();
+
+			switch(choice){
+			case 1: System.out.println("Welcome to Register");
+			register();
+			break;
+			case 2: System.out.println("View Details");
+			viewdetails();
+			break;
+			case 3: System.out.println("Update Information");
+			updatedtails();
+			break;
+			case 4: System.out.println("Delete Information");
+			delete();
+			break;
+			case 5: System.out.println("Thanks ");
+			System.exit(0);
+			break;
+			default: System.out.println("Incorrect input!!! Please re-enter choice");
+			}
+		}
+
+	}
+
+	public static void register(){
+		System.out.println("Name");
+		System.out.println("Course");
+		System.out.println("Batch");
+		System.out.println("Hobbies");
+
+	}
+
+	public static void viewdetails(){
+		System.out.println("View details");
+	}
+
+	public static void updatedetails(){
+		System.out.println("Update details");
+
+	}
+
+	public static void delete(){
+		System.out.println("deleted information");
+	}
+
+	
+	}
+
+}
+2 Create an interface with functionality of calculating SI,CI on principal amount based on given interest rates
+package com.yash.Interest
+public interface Calculation
+{
+    double calculateSimpleIntrest(double Principle,double Rate,double Time);
+    double calculateCompoundIntrest(double Principle,double Rate,double Time);
+	 
+}
+import java.util.Scanner;
+
+public class CalculateCIandPi implements Calculation
+{
+	
+	 double SI=0;
+	 double CI=0;
+	
+	@override
+	public double calculateSimpleIntrest(double Principle,double Rate,double Time) 
+	  {
+		SI= (Principle*Rate*Time)/100;
+		return SI;
+	  }
+
+	@Override
+	public double calculateCompoundIntrest(double Principle,double Rate,double Time) 
+	  {
+		CI = Principle * Math.pow(1.0+Rate/100.0,Time);
+		return CI;
+	  }
+	
+	public static void main(String[] args) 
+	{
+		
+		CalculateCIandPi Obj = new CalculateCIandPi();
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter Principle to be Calculated");
+		double  Principle = sc.nextDouble();
+		System.out.println("Enter Rate to be Calculated");
+		double  Rate = sc.nextDouble();
+		System.out.println("Enter Time to be Calculated");
+		double  Time = sc.nextDouble()
+		System.out.println("Simple Intrest :"+Obj.calculateSimpleIntrest(Principle,Rate,Time));
+		System.out.println("Compound Intrest :"+Obj.calculateCompoundIntrest(Principle,Rate,Time));
+		}
+}
+3 
